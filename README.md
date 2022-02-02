@@ -16,15 +16,17 @@ that should suffice.
 
 * reqs.__version__: '2.25.1'
 
-### Clone the repo, and find cfb_modules.py
+### Clone the repo, and find cfb_plots.py
 
-In there, there is a commented section header which looks like this:
-
-___
+Within the repo, there is a record of all plots checked in for each day, as 
+well as the `cfb_plots.py` file, which can be used to generate any given day's
+plots again.  The script takes a day input (within the if statement below) to
+scrape the API for to produce the plots.
 
 ``` python
-#%% Run Script with functions above
-# HIT CTRL ENTER HERE TO RUN THE DAY'S DATA.
+if __name__ == "__main__":
+    day = 15
+    main(day)
 ```
 
 ### Make an output directory
@@ -39,15 +41,16 @@ will error.
 Within that section, there should be a "day" input set as an int. Increment 
 that, then run the script to make the plots go brr.
 
-Ignore all the warnings, they should be okay. (I'll fix them later, that's 
-what I get for having sloppy code)
+Ignore all warnings, they should be okay, they are just due to not protecting 
+cases where there is only 1 bin, such as early season, or when a team is on 
+their last leg. (I'll fix them later, that's what I get for having sloppy code)
 
 ### Posting the album
 
 And that's it. To make the posts, I post them onto Imgur as an album. I'll add 
 a screenshot of the current board at the end, and the day priors at the start.
 
-I currently manually sort them afterwards to get accustomed to any changes and 
-have fun with the write up myself, but post them however you'd like, even a 
-dull post of just the charts is better than no post (I like it, cause I like 
-to think it helps the game health overall)
+I currently manually take screen grabs afterwards to add to the post, then I 
+just have fun with the write up myself, but post them however you'd like, even 
+a dull post of just the charts is better than no post (I like it, cause I like 
+to think it adds game interactions and interest overall).
